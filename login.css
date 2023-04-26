@@ -1,0 +1,22 @@
+
+.createUsu{
+    text-decoration: none; 
+    color: rgb(3, 154, 255);
+    font-weight: bold;
+    font-size: large;
+    background: rgb(240, 233, 221);
+    border-radius: 5px;
+  }
+
+  .createUsu:hover {
+    color: rgb(18, 189, 18);
+  }
+
+  .createUsu:active {
+    color: rgba(3, 154, 255, 0.637);
+  }
+
+  label {
+    font-weight: bold;
+    text-decoration: underline;
+  }

@@ -1,0 +1,293 @@
+body {
+    margin: 0px;
+  }
+  /*Barra navegacion*/
+  .nav-container {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+    background: rgb(57, 74, 77);
+			background: linear-gradient(90deg, rgba(216, 243, 243, 0.8) 0%, rgba(22, 255, 91, 0.3) 35%, rgba(228, 255, 0, 0.2) 100%);
+  }
+  
+  .logo-navbar {
+    justify-self: start;
+    margin-left: 20px;
+    color: #000000;
+    margin-top: 4vh;
+    cursor: pointer;
+  }
+  
+  
+  .carrito-navbar {
+    
+    margin-right: 20px;
+    margin-top: 2vh;
+    cursor: pointer;
+  }
+  /*boton agregar perro*/
+  .content-newModal {
+    display: flex;
+    justify-content: center;
+   
+  }
+  .newDog-button {
+    
+    align-items: center;
+    background-color: #4CAF50; /*Color de fondo*/
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px; /*Esquinas redondeadas*/
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25); /*Sombra*/
+  }
+  
+  .newDog-button:hover {
+    background-color: #3e8e41; /*Color de fondo en hover*/
+    cursor: pointer;
+  }
+  
+  .newDog-navbar {
+    color: white;
+    text-decoration: none;
+  }
+  /*fondo*/
+  .fondo {
+    background-size: cover;
+    background-position: center;
+    height: 65vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("https://img.freepik.com/vector-premium/fondo-transparente-hueso-perro-colorido_662353-351.jpg?w=2000");
+  }
+  
+  .fondo-container {
+    text-align: center;
+    padding: 15% 0;
+  }
+  
+  .fondo h1 {
+    margin: 0;
+    color: cornsilk;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+    font-size: 62px;
+    font-weight: bold;
+  }
+  
+  .fondo p {
+    font-size: 30px;
+    color: wheat;
+    opacity: 0.7;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  /*---------Cards---------*/
+  .contenedor{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    margin: 10px;
+  }
+
+  .card > img{
+    width: 90%;
+    height: 250px;
+  }
+
+  .nombre{
+     position:relative;
+    display: block;
+    margin: 0 auto;
+    font-size:30px;
+    height: 70px;
+    width: 300px;  
+    text-decoration:none;
+    color:#333;
+    overflow:hidden;
+  }
+
+  .nombre span{
+    position:relative;
+    display: block;
+    background:url(./assets/brillo.png) no-repeat;  
+    background-position: -100px 0px;
+    margin-top:-50px;
+    height: 70px;
+    width: 300px;
+  }
+
+  .nombre:hover span{
+    background-position: 300px 0px;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1s;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+  .descripcion{
+    background-color:  #faf5f577;
+  }
+
+  .precio{
+    color: grey;
+  font-size: 22px;
+  }
+
+  .anadir{
+    border: none;
+  padding: 14px;
+  color: #fff;
+  background-color: #343A40;
+  border-radius: 5px; 
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
+  
+  }
+
+  .anadir:hover {
+    background-image: url("https://img.freepik.com/vector-premium/fondo-transparente-hueso-perro-colorido_662353-351.jpg?w=2000");
+   color: #343A40;
+  }
+
+  .anadir:active {
+    box-shadow: 2px 2px 5px #fc894d;
+  }
+
+  @keyframes slidebg {
+    to {
+      background-position:20vw;
+    }
+  }
+  
+  .follow{
+    margin-top: 40px;
+  }
+  
+  .follow a{
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+  /*---------Ventana Modal--------*/
+  .ventanaModal {
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 10%;
+    max-height: 90vh;
+    color: #000000;
+    background: rgb(57, 74, 77);
+    background: linear-gradient(90deg, rgba(96, 214, 250, 1) 0%, rgba(0, 255, 76, 1) 35%, rgba(228, 255, 0, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 13vh;
+    scrollbar-color: none;
+  }
+  
+  .ventanaModal::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0a0909b2;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  
+  .header-title {
+    font-size: 25px;
+    
+  }
+  
+  .header-button {
+    cursor: pointer;
+    font-size: 5px;
+    background: rgb(255, 44, 44);
+    border-radius: 50%;
+    
+  }
+  
+  .ventanaModal > .carrito-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 20px 0;
+    letter-spacing: 0.2px;
+  }
+  
+  .ventanaModal > div > img {
+    height: 120px;
+    width: 120px;
+    object-fit: contain;
+  }
+  
+  .total-carrito {
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #fff;
+    margin-top: auto;
+  }
+  /*Boton eliminar*/
+
+  .eliminar {
+    background-color: rgba(255, 0, 0, 0.637);
+    border-radius: 45%;
+    cursor: pointer;
+  }
+
+  .eliminar:hover {
+    background-color: red;
+  }
+
+  .eliminar:active {
+    background-color: #fc894d;
+  }
+
+/*Amount Carrito*/
+  .amountCart {
+    background-color: #00C0FF;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    display: none;
+    font-size: 14px;
+    top: 50px;
+    right: 10px;
+    padding: 5px;
+    border-radius: 50%;
+  }
+
+  /*---------------extras--------*/
